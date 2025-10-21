@@ -11,12 +11,6 @@ import copy
 
 
 @pytest.fixture
-def client():
-    """Create a test client for the FastAPI app."""
-    return TestClient(app)
-
-
-@pytest.fixture
 def original_activities():
     """Store the original activities data for restoration after tests."""
     return copy.deepcopy(activities)
